@@ -146,7 +146,7 @@ public class ATM {
     }
 
     private static void checkOwnBalance(AccountHolder accountHolder) {
-        System.out.println("Your current balance is: " + accountHolder.getBalance() + "KZT.");
+        System.out.println("Your current balance is: " + accountHolder.getBalance() + " KZT.");
     }
 
     private static void checkRecipientBalance(Bank bank) {
@@ -160,7 +160,7 @@ public class ATM {
 
         AccountHolder recipient = bank.findAccountHolder(recipientId);
         if (recipient != null && recipient.getPin() == recipientPin) {
-            System.out.println("Recipient's current balance is: " + recipient.getBalance() + "KZT.");
+            System.out.println("Recipient's current balance is: " + recipient.getBalance() + " KZT.");
         } else {
             System.out.println("Invalid recipient ID or PIN.");
         }
