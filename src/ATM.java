@@ -78,7 +78,7 @@ public class ATM {
                     checkBalance(accountHolder, bank);
                     break;
                 case 6:
-                    System.out.println("Thank you for using the ATM. Goodbye!");
+                    System.out.println("Thank you for using the ATM. See you next time!");
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -131,7 +131,7 @@ public class ATM {
 
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine();
 
         switch (choice) {
             case 1:
@@ -160,7 +160,7 @@ public class ATM {
 
         AccountHolder recipient = bank.findAccountHolder(recipientId);
         if (recipient != null && recipient.getPin() == recipientPin) {
-            System.out.println("Recipient's current balance is: $" + recipient.getBalance());
+            System.out.println("Recipient's current balance is: " + recipient.getBalance() + "KZT.");
         } else {
             System.out.println("Invalid recipient ID or PIN.");
         }
